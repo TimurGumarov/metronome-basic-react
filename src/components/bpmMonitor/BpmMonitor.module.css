@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.BpmMonitor {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    width: 480px;
+    height: 280px;
+    background: #E7F2F2;
+    border-radius: 8px;
+    padding: 0 20px 0 10px;
+    box-sizing: border-box;
+    transition: background-color ease-in-out 0.2s;
+}
+
+.BpmMonitor_Text {
+    display: inline-block;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    height: 280px;
+    font-family: 'Righteous', sans-serif;
+    font-size: 260px;
+    line-height: 280px;
+    text-align: end;
+    margin: 0;
+    color: #494C4D;
+    transition: color ease-in-out 0.2s;
+}
+
+@media (prefers-color-scheme: dark) {
+    .BpmMonitor {
+        background: #242626;
+    }
+    .BpmMonitor_Text {
+        color: hsl(180, 25%, 35%);
+    }
+}
