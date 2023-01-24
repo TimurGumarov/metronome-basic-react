@@ -1,16 +1,18 @@
-import React from 'react';
-import { describe, it, expect, vi } from 'vitest'
-import { render, screen, userEvent } from '../../utils/test-utils'
-import ButtonsLayout from './ButtonsLayout'
+import React from "react"
+import { describe, it, expect, vi } from "vitest"
+import { render, screen, userEvent } from "../../utils/test-utils"
+import ButtonsLayout from "./ButtonsLayout"
 
-describe('ButtonsLayout component', () => {
-  vi.mock('../../context/MetronomeContext', async () => {
+describe("ButtonsLayout component", () => {
+  vi.mock("../../context/MetronomeContext", async () => {
     return {
-      MetronomeContext: React.createContext<object | null>({updateMetronomeBpm: vi.fn()})
+      MetronomeContext: React.createContext<object | null>({
+        updateMetronomeBpm: vi.fn(),
+      }),
     }
   })
 
-  it('should be rendered once', async () => {
+  it("should be rendered once", async () => {
     render(<ButtonsLayout />)
     expect(await screen.findByText(/^\+1$/i)).toBeInTheDocument()
     expect((await screen.findAllByText(/^\+1$/i)).length).toBe(1)

@@ -1,11 +1,11 @@
-import './App.css'
-import BpmMonitor from './components/bpmMonitor/BpmMonitor'
-import ButtonsLayout from './components/buttonsLayout/ButtonsLayout';
-import { MetronomeProvider } from './context/MetronomeContext'
-import { MetronomeInit } from './utils/metronome-engine';
+import "./App.css"
+import BpmMonitor from "./components/bpmMonitor/BpmMonitor"
+import ButtonsLayout from "./components/buttonsLayout/ButtonsLayout"
+import { MetronomeProvider } from "./context/MetronomeContext"
+import { MetronomeInit } from "./utils/metronome-engine"
 
 function App() {
-  MetronomeInit();
+  MetronomeInit()
 
   return (
     <MetronomeProvider>
@@ -18,4 +18,3 @@ function App() {
 }
 
 export default App
-

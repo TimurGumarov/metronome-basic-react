@@ -1,7 +1,7 @@
 .App {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 20px;
-    /* Move a bit up to compensate center. */
-    transform: translateY(-40px);
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
+  /* Move a bit up to compensate center. */
+  transform: translateY(-40px);
 }
