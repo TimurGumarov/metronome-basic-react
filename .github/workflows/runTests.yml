@@ -2,12 +2,10 @@ name: RunTests
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ "!main" ]
 
 jobs:
-  build:
+  run-tests:
     name: Test
     runs-on: ubuntu-latest
 
